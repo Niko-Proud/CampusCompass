@@ -19,6 +19,7 @@ sqlite = "2.7.1"
 ksp = "2.3.10"
 
 [libraries]
+# Shared testing dependencies are declared here so every target uses the same versions.
 kotlin-test = { module = "org.jetbrains.kotlin:kotlin-test", version.ref = "kotlin" }
 kotlin-testJunit = { module = "org.jetbrains.kotlin:kotlin-test-junit", version.ref = "kotlin" }
 junit = { module = "junit:junit", version.ref = "junit" }
@@ -38,6 +39,7 @@ compose-components-resources = { module = "org.jetbrains.compose.components:comp
 compose-uiToolingPreview = { module = "org.jetbrains.compose.ui:ui-tooling-preview", version.ref = "composeMultiplatform" }
 compose-uiTest = { module = "org.jetbrains.compose.ui:ui-test", version.ref = "composeMultiplatform" }
 kotlinx-coroutines-test = { module = "org.jetbrains.kotlinx:kotlinx-coroutines-test", version.ref = "coroutines" }
+# Preferences DataStore is the KMP-supported storage used for the restored login ID.
 androidx-datastore-core = { module = "androidx.datastore:datastore-core", version = "1.2.1" }
 androidx-datastore-preferences-core = { module = "androidx.datastore:datastore-preferences-core", version = "1.2.1" }
 androidx-sqlite-bundled = { module = "androidx.sqlite:sqlite-bundled", version.ref = "sqlite" }
