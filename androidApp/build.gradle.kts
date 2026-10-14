@@ -12,6 +12,11 @@ kotlin {
 }
 dependencies {
     implementation(project(":shared"))
+    // MainActivity receives the shared Room3 database builder, so the app module
+    // also needs Room3 available when compiling that public return type.
+    implementation(libs.androidx.room3.runtime)
+    implementation(libs.androidx.sqlite.bundled)
+    implementation(libs.androidx.sqlite.async)
 
     implementation(libs.androidx.activity.compose)
 
